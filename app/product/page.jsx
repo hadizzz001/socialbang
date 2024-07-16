@@ -1998,7 +1998,7 @@ const page = () => {
                   <span className="ProvidersIfSelectedProductMatchesFilter">
 
                   </span>
-                  <div
+                  {/* <div
                     className="DynamicAccordion"
                     data-behaviour="tabs"
                     id="dynamic_tabs_misc"
@@ -2053,7 +2053,7 @@ const page = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </section>
               </div>
               <span className="ProvidersIfSelectedProductMatchesFilter">

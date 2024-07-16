@@ -236,7 +236,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/customer-care/terms-conditions"
+                                    href="/term"
                                     data-auto-id="true"
                                     id="page-footer-customer-care-terms-conditions-1"
                                 >
@@ -245,22 +245,13 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/customer-care/privacy-policy"
+                                    href="/privacy"
                                     data-auto-id="true"
                                     id="page-footer-customer-care-privacy-policy-2"
                                 >
                                     Privacy Policy
                                 </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/customer-care/cookie-policy"
-                                    data-auto-id="true"
-                                    id="page-footer-customer-care-cookie-policy-1"
-                                >
-                                    Cookie Policy
-                                </a>
-                            </li>
+                            </li> 
                         </ul>
                     </div>
 
@@ -441,96 +432,13 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <a
-                                    href="/about-us"
+                                    href="/about"
                                     data-auto-id="true"
                                     id="page-footer-about-us-1"
                                 >
                                     Our Story
                                 </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/our-materials"
-                                    data-auto-id="true"
-                                    id="page-footer-our-materials-1"
-                                >
-                                    Our Materials
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/responsible-business"
-                                    data-auto-id="true"
-                                    id="page-footer-responsible-business-1"
-                                >
-                                    Responsible Business
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/ambassadors"
-                                    data-auto-id="true"
-                                    id="page-footer-ambassadors-1"
-                                >
-                                    Ambassadors
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/journal" data-auto-id="true" id="page-footer-journal-1">
-                                    Journal
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/collaborations"
-                                    data-auto-id="true"
-                                    id="page-footer-collaborations-1"
-                                >
-                                    Collaborations
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/retailers"
-                                    data-auto-id="true"
-                                    id="page-footer-retailers-1"
-                                >
-                                    Find In-Store
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/affiliate-program"
-                                    data-auto-id="true"
-                                    id="page-footer-affiliate-program-1"
-                                >
-                                    Affiliate Program
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/corporate-gifting"
-                                    data-auto-id="true"
-                                    id="page-footer-corporate-gifting-1"
-                                >
-                                    Corporate Gifting
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/press" data-auto-id="true" id="page-footer-press-1">
-                                    Press
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/careers" data-auto-id="true" id="page-footer-careers-1">
-                                    Careers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sitemap" data-auto-id="true" id="page-footer-sitemap-1">
-                                    Sitemap
-                                </a>
-                            </li>
+                            </li> 
                         </ul>
                     </div>
                     <div className="column ">  </div>
