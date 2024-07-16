@@ -94,7 +94,7 @@ function Products() {
                             </div>
                         </div>
                     </div>
-                    <div id="tabss2" className="productTabs__tabs__tab" data-tab="tab_1" onClick={() => handletab(2)}>
+                    {/* <div id="tabss2" className="productTabs__tabs__tab" data-tab="tab_1" onClick={() => handletab(2)}>
                         <div className="productTabs__arrow"></div>
                         <div className="productTabs__tabContent">
                             <div className="productTabs__tabContent__image productTabs__tabContent__image_tab_1"></div>
@@ -110,7 +110,7 @@ function Products() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div id="tabss3" className="productTabs__tabs__tab" data-tab="tab_3" onClick={() => handletab(3)}>
                         <div className="productTabs__arrow"></div>
                         <div className="productTabs__tabContent">
@@ -125,7 +125,7 @@ function Products() {
                             </div>
                         </div>
                     </div>
-                    <div id="tabss4" className="productTabs__tabs__tab" data-tab="tab_4" onClick={() => handletab(4)}>
+                    {/* <div id="tabss4" className="productTabs__tabs__tab" data-tab="tab_4" onClick={() => handletab(4)}>
                         <div className="productTabs__arrow"></div>
                         <div className="productTabs__tabContent">
                             <div className="productTabs__tabContent__image productTabs__tabContent__image_tab_4"></div>
@@ -138,7 +138,7 @@ function Products() {
                                 <p />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
 
@@ -166,9 +166,9 @@ function Products() {
 
                     {/* start tab 2*/}
 
-                    <div className={showtab === 2 ? "tab-pane fade show active" : "tab-pane fade show"} >
+                    {/* <div className={showtab === 2 ? "tab-pane fade show active" : "tab-pane fade show"} >
                     <RCards/>
-                    </div>
+                    </div> */}
                     {/* close tab 2*/}
 
 
@@ -179,9 +179,9 @@ function Products() {
                     {/* close tab 3*/}
 
                     {/* start tab 3*/}
-                    <div className={showtab === 4 ? "tab-pane fade show active" : "tab-pane fade show"} >
+                    {/* <div className={showtab === 4 ? "tab-pane fade show active" : "tab-pane fade show"} >
                     <Stickers/>
-                    </div>
+                    </div> */}
                     {/* close tab 3*/}
 
 

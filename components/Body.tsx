@@ -145,7 +145,7 @@ const Body = () => {
 
 
         <div id="usp-scroll-to"></div>
-
+        <Work />
         <Products />
         <Design />
 
@@ -160,7 +160,7 @@ const Body = () => {
 
 
 
-        <Work />
+       
         <Contact />
         <Feature />
 

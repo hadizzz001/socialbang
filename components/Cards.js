@@ -88,7 +88,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Business Cards"
+                        href="/product?id=658545e26a1e745f48b9f156"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
