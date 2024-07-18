@@ -23,15 +23,16 @@ const cartReducer = (state, action) => {
 let storedCart 
 const CartProvider = ({ children }) => {
   const [cart, dispatch] = useReducer(cartReducer, [], (initial) => {
-    if (typeof window !== "undefined") {
+     
       try {
+        if (typeof window !== 'undefined') {
         storedCart = localStorage.getItem('cart');
+        }
         return storedCart ? JSON.parse(storedCart) : initial;
       } catch (error) {
         console.error('Error parsing cart from localStorage:', error);
         return initial;
-      }
-    } 
+      } 
   });
   const [quantities, setQuantities] = useState(() => {
     const storedQuantities = localStorage.getItem('quantities');
@@ -40,11 +41,15 @@ const CartProvider = ({ children }) => {
   const [subtotal, setSubtotal] = useState(0);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     localStorage.setItem('cart', JSON.stringify(cart));
+    }
   }, [cart]);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     localStorage.setItem('quantities', JSON.stringify(quantities));
+    }
   }, [quantities]);
 
   useEffect(() => {

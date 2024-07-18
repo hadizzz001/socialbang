@@ -35,24 +35,13 @@ const Body = () => {
 
 
     const checkboxesData = [
-        { id: 1, label: 'Cards' },
-        { id: 2, label: 'Tags' },
-        { id: 3, label: 'Stands' },
-        { id: 4, label: 'Stickers' },
-        { id: 5, label: 'Business Cards' },
-        { id: 6, label: 'Reviews Cards' },
-        { id: 7, label: 'Social Media Cards' },
-        { id: 8, label: 'Medical ID Cards' },
-        { id: 9, label: 'Pets Tags' },
-        { id: 10, label: 'Reviews Tags' },
-        { id: 11, label: 'Social Media Tags' },
-        { id: 12, label: 'Medical ID Tags' },
-        { id: 13, label: 'Review Stands' },
-        { id: 14, label: 'Menu Stands' },
-        { id: 15, label: 'Business Cards Stickers' },
-        { id: 16, label: 'Reviews Stickers' },
-        { id: 17, label: 'Social Media Stickers' },
-        { id: 18, label: 'Medical ID Stickers' },
+        { id: 1, label: 'Cards' }, 
+        { id: 2, label: 'Stands' }, 
+        { id: 3, label: 'Business Cards' },
+        { id: 4, label: 'Reviews Cards' },
+        { id: 5, label: 'Social Media Cards' }, 
+        { id: 6, label: 'Review Stands' },
+        { id: 7, label: 'Menu Stands' }, 
     ];
 
 
@@ -169,12 +158,12 @@ const Body = () => {
                             Our Products
                         </h1>
                         <p className="br_text-base-sans-stretched md:br_text-lg-sans-stretched">
-                            Discover stylish cards, tags, stands, and stickers to elevate your personal and professional expression.
+                            Discover stylish cards and stands to elevate your personal and professional expression.
                         </p>
                     </div>
                 </header>
                 <div className="br_flex">
-                    <div id='filterId1' className="br_text-grey-500 br_fixed br_top-full br_h-full br_bottom-0 br_left-0 br_right-0 br_bg-white br_z-[9999] br_mt-0 br_flex br_flex-col br_justify-between br_transition-opacity br_duration-300 md:br_mt-14 md:br_flex-[0_0_280px] md:br_z-[9980]  br_translate-y-0 br_opacity-0 md:br_opacity-100 md:br_block md:br_relative md:br_h-auto md:br_transform-none">
+                    {/* <div id='filterId1' className="br_text-grey-500 br_fixed br_top-full br_h-full br_bottom-0 br_left-0 br_right-0 br_bg-white br_z-[9999] br_mt-0 br_flex br_flex-col br_justify-between br_transition-opacity br_duration-300 md:br_mt-14 md:br_flex-[0_0_280px] md:br_z-[9980]  br_translate-y-0 br_opacity-0 md:br_opacity-100 md:br_block md:br_relative md:br_h-auto md:br_transform-none">
                         <div className="br_items-center md:br_hidden br_grid br_px-4 br_grid-cols-[repeat(3,1fr)] br_border-solid br_border-0 br_border-b br_border-grey-300">
 
                             <div className="br_text-base-sans-bold-stretched br_tracking-cta br_text-grey-600 br_my-4 br_py-2 br_px-0 br_border-none br_bg-transparent"></div>
@@ -232,10 +221,10 @@ const Body = () => {
                                             </span>
                                             {checkboxesData[0].label}
                                         </label>
-                                    </div>
+                                    </div> 
                                     <div
                                         className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="5 - 10 cards"
+                                        title="<5 cards"
                                     >
                                         <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
                                             <input
@@ -246,50 +235,12 @@ const Body = () => {
                                             />
                                             <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
                                                 <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_2' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
+                                                    <img id='id_3' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
                                                 </span>
                                             </span>
                                             {checkboxesData[1].label}
                                         </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="<5 cards"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(2)}
-                                                onChange={() => handleCheckboxChange(2, checkboxesData[2].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_3' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[2].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(3)}
-                                                onChange={() => handleCheckboxChange(3, checkboxesData[3].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_4' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[3].label}
-                                        </label>
-                                    </div>
+                                    </div> 
                                 </div>
                             </details>
                             <details className="br_pl-4 md:br_pl-8 br_pr-4">
@@ -320,15 +271,34 @@ const Body = () => {
                                             <input
                                                 className="br_absolute br_h-0 br_w-0 br_opacity-0"
                                                 type="checkbox"
-                                                checked={checkedIndices.includes(4)}
-                                                onChange={() => handleCheckboxChange1(4, checkboxesData[4].label)}
+                                                checked={checkedIndices.includes(2)}
+                                                onChange={() => handleCheckboxChange1(2, checkboxesData[2].label)}
                                             />
                                             <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
                                                 <span className="br_h-full br_w-full br_text-white  ">
                                                     <img id='id_5' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
                                                 </span>
                                             </span>
-                                            {checkboxesData[4].label}
+                                            {checkboxesData[2].label}
+                                        </label>
+                                    </div>
+                                    <div
+                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
+                                        title="Cards"
+                                    >
+                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
+                                            <input
+                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
+                                                type="checkbox"
+                                                checked={checkedIndices.includes(3)}
+                                                onChange={() => handleCheckboxChange1(3, checkboxesData[3].label)}
+                                            />
+                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
+                                                <span className="br_h-full br_w-full br_text-white  ">
+                                                    <img id='id_5' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
+                                                </span>
+                                            </span>
+                                            {checkboxesData[3].label}
                                         </label>
                                     </div>
                                     <div
@@ -339,15 +309,15 @@ const Body = () => {
                                             <input
                                                 className="br_absolute br_h-0 br_w-0 br_opacity-0"
                                                 type="checkbox"
-                                                checked={checkedIndices.includes(5)}
-                                                onChange={() => handleCheckboxChange1(5, checkboxesData[5].label)}
+                                                checked={checkedIndices.includes(4)}
+                                                onChange={() => handleCheckboxChange1(4, checkboxesData[4].label)}
                                             />
                                             <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
                                                 <span className="br_h-full br_w-full br_text-white  ">
                                                     <img id='id_6' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
                                                 </span>
                                             </span>
-                                            {checkboxesData[5].label}
+                                            {checkboxesData[4].label}
                                         </label>
                                     </div>
                                     <div
@@ -358,17 +328,17 @@ const Body = () => {
                                             <input
                                                 className="br_absolute br_h-0 br_w-0 br_opacity-0"
                                                 type="checkbox"
-                                                checked={checkedIndices.includes(6)}
-                                                onChange={() => handleCheckboxChange1(6, checkboxesData[6].label)}
+                                                checked={checkedIndices.includes(5)}
+                                                onChange={() => handleCheckboxChange1(5, checkboxesData[56].label)}
                                             />
                                             <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
                                                 <span className="br_h-full br_w-full br_text-white  ">
                                                     <img id='id_7' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
                                                 </span>
                                             </span>
-                                            {checkboxesData[6].label}
+                                            {checkboxesData[5].label}
                                         </label>
-                                    </div>
+                                    </div> 
                                     <div
                                         className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
                                         title="Coins"
@@ -377,218 +347,28 @@ const Body = () => {
                                             <input
                                                 className="br_absolute br_h-0 br_w-0 br_opacity-0"
                                                 type="checkbox"
-                                                checked={checkedIndices.includes(7)}
-                                                onChange={() => handleCheckboxChange1(7, checkboxesData[7].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_8' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[7].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(8)}
-                                                onChange={() => handleCheckboxChange1(8, checkboxesData[8].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_9' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[8].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(9)}
-                                                onChange={() => handleCheckboxChange1(9, checkboxesData[9].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_10' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[9].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(10)}
-                                                onChange={() => handleCheckboxChange1(10, checkboxesData[10].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_11' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[10].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(11)}
-                                                onChange={() => handleCheckboxChange1(11, checkboxesData[11].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_12' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[11].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(12)}
-                                                onChange={() => handleCheckboxChange1(12, checkboxesData[12].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_13' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[12].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(13)}
-                                                onChange={() => handleCheckboxChange1(13, checkboxesData[13].label)}
+                                                checked={checkedIndices.includes(6)}
+                                                onChange={() => handleCheckboxChange1(6, checkboxesData[6].label)}
                                             />
                                             <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
                                                 <span className="br_h-full br_w-full br_text-white  ">
                                                     <img id='id_14' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
                                                 </span>
                                             </span>
-                                            {checkboxesData[13].label}
+                                            {checkboxesData[6].label}
                                         </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(14)}
-                                                onChange={() => handleCheckboxChange1(14, checkboxesData[14].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_15' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[14].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(15)}
-                                                onChange={() => handleCheckboxChange1(15, checkboxesData[15].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_16' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[15].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(16)}
-                                                onChange={() => handleCheckboxChange1(16, checkboxesData[16].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_17' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[16].label}
-                                        </label>
-                                    </div>
-                                    <div
-                                        className="br_block br_relative br_max-w-full br_w-full br_py-2 br_break-inside-avoid md:br_inline-block md:br_overflow-hidden md:br_m-0 md:br_p-0"
-                                        title="Coins"
-                                    >
-                                        <label className="br_flex br_gap-4 br_cursor-pointer br_text-grey-600 br_text-base-sans-spaced br_py-1 md:br_py-2">
-                                            <input
-                                                className="br_absolute br_h-0 br_w-0 br_opacity-0"
-                                                type="checkbox"
-                                                checked={checkedIndices.includes(17)}
-                                                onChange={() => handleCheckboxChange1(17, checkboxesData[17].label)}
-                                            />
-                                            <span className="br_shrink-0 br_relative br_h-[22px] br_w-[22px] br_border-[#4a4a4a] br_border-solid br_border br_rounded md:br_h-[18px] md:br_w-[18px] ">
-                                                <span className="br_h-full br_w-full br_text-white  ">
-                                                    <img id='id_18' src="https://res.cloudinary.com/duppvjinz/image/upload/v1701541407/jhvrodq8u9e8vjlwe964.png" alt="" />
-                                                </span>
-                                            </span>
-                                            {checkboxesData[17].label}
-                                        </label>
-                                    </div>
+                                    </div>  
                                 </div>
                             </details>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
 
 
                     <div className="br_flex-1" onClick={handleClick1}>
-                        <div className="br_flex br_justify-between br_items-center br_gap-4 br_mb-2 br_px-4 br_my-4 md:br_justify-end">
+                        {/* <div className="br_flex br_justify-between br_items-center br_gap-4 br_mb-2 br_px-4 br_my-4 md:br_justify-end">
                             <div className="br_flex br_gap-4 br_items-center md:br_hidden">
                                 <button className="br_leading-5 br_text-base-sans-bold-stretched br_px-4 br_py-2 br_rounded br_border br_border-solid br_flex br_gap-2 br_justify-center br_items-center br_whitespace-nowrap br_bg-transparent br_text-grey-600 br_border-grey-300">
                                     <svg width={16} height={14}>
@@ -601,7 +381,7 @@ const Body = () => {
                                     Filters
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
 
 
 

@@ -277,7 +277,7 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <a
-                                    href="/search?type=Business Cards"
+                                    href="/product?id=658545e26a1e745f48b9f156"
                                     data-auto-id="true"
                                     id="page-footer-collection-new-releases-1"
                                 >
@@ -286,76 +286,27 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/search?type=Reviews Cards"
+                                    href="/product?id=65855d8e6834bc74637db118"
                                     data-auto-id="true"
                                     id="page-footer-collection-bestsellers-1"
                                 >
 
-                                    Reviews Cards
+                                    Google Review Cards
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="/search?type=Social Media Cards"
+                                    href="/product?id=6696707be53994f0bf8453ae"
                                     data-auto-id="true"
                                     id="page-footer-coming-soon-1"
                                 >
 
                                     Social Media Cards
                                 </a>
-                            </li>
+                            </li>  
                             <li>
                                 <a
-                                    href="/search?type=Medical ID Cards"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-premium-1"
-                                >
-
-                                    Medical ID Cards
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Pets Tags"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-venture-1"
-                                >
-                                    Pets Tags
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Reviews Tags"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-for-tech-lovers-1"
-                                >
-
-                                    Reviews Tags
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Social Media Tags"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-small-bags-1"
-                                >
-
-                                    Social Media Tags
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Medical ID Tags"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-recycled-1"
-                                >
-
-                                    Medical ID Tags
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Review Stands"
+                                    href="/product?id=658562fb6834bc74637db148"
                                     data-auto-id="true"
                                     id="page-footer-collection-slim-your-wallet-1"
                                 >
@@ -364,50 +315,14 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/search?type=Menu Stands"
+                                    href="/product?id=6585631a6834bc74637db14b"
                                     data-auto-id="true"
                                     id="page-footer-collection-apex-1"
                                 >
                                     Menu Stands
                                 </a>
                             </li>
-                            <li>
-                                <a
-                                    href="/search?type=Business Cards Stickers"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-materials-guide-1"
-                                >
-                                    Business Cards Stickers
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Reviews Stickers"
-                                    data-auto-id="true"
-                                    id="page-footer-products-category-outlet-1"
-                                >
-                                    Reviews Stickers
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Social Media Stickers"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-travel-1"
-                                >
-
-                                    Social Media Stickers
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/search?type=Medical ID Stickers"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-lite-1"
-                                >
-                                    Medical ID Stickers
-                                </a>
-                            </li>
+ 
                         </ul>
                     </div>
                     <div className="column collapsable-section" id='footId3' onClick={handleFoot3}>

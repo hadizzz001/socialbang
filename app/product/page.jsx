@@ -14,6 +14,7 @@ import Dropzonee from '../../components/Dropzonee'
 import { useCart } from '../context/CartContext';
 import { useBooleanValue } from '../context/CartBoolContext';
 import { useMyContext } from '../context/PDFContext';
+import Contact1 from '../../components/Contact1';
 
 
 const page = () => {
@@ -23,10 +24,9 @@ const page = () => {
   const [allTemp1, setTemp1] = useState()
   const [allTemp2, setTemp2] = useState()
   const [value, setValue] = useState('');
-  const [inputs, setInputs] = useState({style: 'white'});
+  const [inputs, setInputs] = useState();
   const [imgz, setImgs] = useState('');
   const [imgzz, setImgss] = useState('');
-  const [selectedOption, setSelectedOption] = useState('white');
   let b
   let b2
   const searchParams = useSearchParams()
@@ -41,6 +41,26 @@ const page = () => {
   const specificItem = cart?.find((cartItem) => String(cartItem.id) === String(search));
   const { myString, stringSaved, saveString, deleteString } = useMyContext();
   const router = useRouter();
+  const [quantity, setQuantity] = useState(1);
+
+  const handleQuantityChange = (event) => {
+    const newQuantity = parseInt(event.target.value, 10);
+    if (newQuantity >= 1) {
+      setQuantity(newQuantity);
+    }
+  };
+
+  const incrementQuantity = () => {
+    setQuantity(prevQuantity => prevQuantity + 1);
+  };
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(prevQuantity => prevQuantity - 1);
+    }
+  };
+
+
 
   useEffect(() => {
     setInputs((prevState) => ({ ...prevState, imgz: imgz[0], imgzz: imgzz[0] }));
@@ -54,7 +74,7 @@ const page = () => {
   if (stringSaved) {
     setInputs({ pdf: myString })
     deleteString()
-    addToCart(allTemp1, inputs, 1);
+    addToCart(allTemp1, inputs, quantity);
     window.location.replace(`/product?id=${search}&custom=1`);
   }
 
@@ -81,6 +101,10 @@ const page = () => {
     price = allTemp1.price
     desc = allTemp1.description
   }
+
+
+
+
 
 
 
@@ -115,22 +139,7 @@ const page = () => {
     fetchPrice();
   }, []);
 
-  const handleSelectChange = (event) => {
-    const newOption = event.target.value;
-    setSelectedOption(newOption);
 
-    if (!allTemp1) return;
-
-    const currentPrice = parseInt(allTemp1.price, 10);
-
-    if (newOption === 'black') {
-      setTemp1(prevState => ({ ...prevState, price: `${currentPrice + 5}` }));
-      setInputs(prevState => ({ ...prevState, style: 'black' }))
-    } else {
-      fetchPrice();
-      setInputs(prevState => ({ ...prevState, style: 'white' }))
-    }
-  };
 
 
 
@@ -198,7 +207,7 @@ const page = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addToCart(allTemp1, inputs, 1);
+    addToCart(allTemp1, inputs, quantity);
     handleClickc()
   };
 
@@ -258,6 +267,66 @@ const page = () => {
     console.log(inputs);
   }, [inputs]);
 
+  useEffect(() => {
+    console.log(allTemp1);
+  }, [allTemp1])
+
+
+
+  const [selectedOption1, setSelectedOption1] = useState('White card - Name');
+
+
+  const handleSelectChange1 = (selectedIndex) => {
+    const newOption = event.target.value; 
+
+    setSelectedOption1(newOption);
+    handleClick(selectedIndex);
+
+    if (!allTemp1) return;
+
+    switch (selectedIndex) {
+      case 1: // Index 1 corresponds to 'White card - Logo'
+        setTemp1((prevState) => ({ ...prevState, price: '15' }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'White card - Logo' }));
+        break;
+      case 2: // Index 2 corresponds to 'Full Colour card'
+        setTemp1((prevState) => ({ ...prevState, price: '20' }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'Full Colour card' }));
+        break;
+      default: // Default case or index 0 corresponds to 'White card - Name'
+        setTemp1((prevState) => ({ ...prevState, price: '9' }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'White card - Name' }));
+        break;
+    }
+  };
+
+
+
+
+
+
+  const [selectedOption, setSelectedOption] = useState('white');
+
+
+  const handleSelectChange = (selectedIndex) => {
+    const newOption = event.target.value;
+    setSelectedOption(newOption);
+    handleClick(selectedIndex)
+
+    if (!allTemp1) return;
+
+    if (newOption === 'black') {
+      setTemp1(prevState => ({ ...prevState, price: '15' }));
+      setInputs((prevState) => ({ ...prevState, color: 'black' }));
+    } else {
+      setTemp1(prevState => ({ ...prevState, price: '9' }));
+      setInputs((prevState) => ({ ...prevState, color: 'white' }));
+    }
+  };
+
+
+
+
 
 
 
@@ -273,7 +342,7 @@ const page = () => {
       <div className="">
         <div className=""></div>
         <div className="">
-          <div className="form-group ">
+          {/* <div className="form-group ">
             <div className="">
               <input
                 className="form-control"
@@ -335,26 +404,61 @@ const page = () => {
                 required
               />
             </div>
-          </div>
+          </div> */}
 
 
 
-          <div className="form-group  pt-2">
-            <div className="">
+          <div className="form-group ">
+            
               <p>Choose front picture</p>
-              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
+              <Dropzone HandleImagesChange={handleImgChange} className='border border-neutral-200 p-16  ' />
 
-            </div>
+            
           </div>
 
 
 
 
+          <div className="form-group ">
+             
+              <p>Choose Back picture</p>
+              <Dropzonee HandleImagesChange={handleImgChangee} className=' border border-neutral-200 p-16  ' />
+
+             
+          </div>
+
           <div className="form-group  pt-2">
             <div className="">
-              <p>Choose Back picture</p>
-              <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
+              <p className='mb-2'>Card options</p>
+              <select
+                className='mb-2'
+                value={selectedOption1}
+                onChange={(event) => handleSelectChange1(event.target.selectedIndex)}
+                style={{ width: '100%', padding: '.5em' }}
+              >
+                <option value="White card - Name">White card - Name</option>
+                <option value="White card - Logo">White card - Logo</option>
+                <option value="Full Colour card">Full Colour card</option>
+              </select>
+            </div>
 
+          </div>
+
+
+
+          <div className="form-group  pt-2">
+            <b className='mb-2'>Add your personalisation </b>
+            <p className='small'>Please provide:</p>
+            <p className='small'>- Full name and any text details that you want to be printed on the card.</p>
+            <p className='small'>- If you choose the option for a card with a logo, please send us the logo file with a transparent background in a message via Social Tap.</p>
+            <div className="">
+              <textarea
+                className="form-control"
+                name="details"
+                type="text"
+                onChange={handleChange}
+                required
+              />
             </div>
           </div>
 
@@ -383,7 +487,7 @@ const page = () => {
       <div className="">
         <div className=""></div>
         <div className="">
-          <div className="form-group ">
+          {/* <div className="form-group ">
             <div className="">
 
 
@@ -427,7 +531,7 @@ const page = () => {
 
 
             </div>
-          </div>
+          </div> */}
 
 
 
@@ -451,8 +555,8 @@ const page = () => {
 
           <div className="form-group  pt-2">
             <div className="">
-            <p className='mb-2'>Style</p>
-              <select value={selectedOption} onChange={handleSelectChange} style={{ width: '100%',padding: '.5em'}}>
+              <p className='mb-2'>Color</p>
+              <select value={selectedOption} onChange={(event) => handleSelectChange(event.target.selectedIndex)} style={{ width: '100%', padding: '.5em' }}>
                 <option value="white">White</option>
                 <option value="black">Black</option>
               </select>
@@ -460,7 +564,7 @@ const page = () => {
 
           </div>
 
-          <div className="form-group  pt-2">
+          {/* <div className="form-group  pt-2">
             <div className="">
               <p>Choose front picture</p>
               <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
@@ -475,7 +579,7 @@ const page = () => {
               <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
 
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className=""></div>
@@ -581,7 +685,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="form-group  pt-2">
+          {/* <div className="form-group  pt-2">
             <div className="">
               <p>Choose front picture</p>
               <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
@@ -596,7 +700,7 @@ const page = () => {
               <Dropzonee HandleImagesChange={handleImgChangee} className='mt-10 border border-neutral-200 p-16  ' />
 
             </div>
-          </div>
+          </div> */}
         </div>
         <div className=""></div>
 
@@ -1952,6 +2056,52 @@ const page = () => {
                     </span>
                   </div>
 
+                  <div style={{ marginTop: '20px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
+                    <label htmlFor="quantity" style={{ marginRight: '10px' }}>Quantity:</label>
+                    <button
+                      onClick={decrementQuantity}
+                      style={{
+                        padding: '10px 10px',
+                        fontSize: '16px',
+                        margin: '0 10px',
+                        border: '1px solid #000',
+                        backgroundColor: '#f0f0f0',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      -
+                    </button>
+                    <input
+                      id="quantity"
+                      type="text"
+                      value={quantity}
+                      onChange={handleQuantityChange}
+                      min="1"
+                      style={{
+                        width: '50px',
+                        textAlign: 'center',
+                        padding: '10px 10px',
+                        WebkitAppearance: 'none',
+                        MozAppearance: 'textfield',
+                        appearance: 'textfield'
+                      }}
+                      readOnly
+                    />
+                    <button
+                      onClick={incrementQuantity}
+                      style={{
+                        padding: '10px 10px',
+                        fontSize: '16px',
+                        margin: '0 10px',
+                        border: '1px solid #000',
+                        backgroundColor: '#f0f0f0',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      +
+                    </button>
+                  </div>
+
                   <div className="bagsFeaturesGrid__gridWrapper">
 
 
@@ -2084,6 +2234,9 @@ const page = () => {
 
                     </div>
                   </div> */}
+
+
+                  <Contact1 />
 
                   <style
                     dangerouslySetInnerHTML={{

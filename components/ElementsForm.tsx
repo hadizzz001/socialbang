@@ -137,8 +137,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                               <table class="table" style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">
                                 <thead>
                                   <tr>
-                                    <th style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">Product</th>
-                                    <th style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">image</th>
+                                    <th style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">Product</th> 
                                     <th style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">Price</th>
                                     <th style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">Quantity</th>
                                     <th style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">Total</th>
@@ -148,8 +147,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
                                 <tbody>
                                 ${cart.map((product: any) => `
                                 <tr>
-                                  <td style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">${product.title}</td>
-                                  <td style="border: 1px solid #000000; border-collapse: collapse; padding: 1em"><img src=${product.img[0]} width=55 height=55 alt="Product image" /></td>
+                                  <td style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">${product.title}</td> 
                                   <td style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">$ ${product.price}</td>
                                   <td style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">${product.quantity}</td>
                                   <td style="border: 1px solid #000000; border-collapse: collapse; padding: 1em">$ ${product.quantity * +product.price}</td> 
@@ -252,7 +250,7 @@ function CheckoutForm({ personal, cart, finalTotal }: { personal: PersonalInfo; 
             const { error: confirmError } = await stripe!.confirmPayment({
                 elements,
                 clientSecret,
-                confirmParams: {
+                confirmParams: { 
                     return_url: "https://socialtapnfc.au/done",
                     payment_method_data: {
                         billing_details: {

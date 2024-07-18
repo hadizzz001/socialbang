@@ -12,14 +12,14 @@ export default function Test() {
   const defaultBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711547493/nirvjkbqlgulzel9tkw2.png';
   const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/en6tiwnle1k7jed0jam8.webp';
 
-  const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995824/uwn5sss3aitbeaku3ova.png';
-  const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/yrt9da39oomvcjklvi6c.webp';
+  // const defaultBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995824/uwn5sss3aitbeaku3ova.png';
+  // const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/yrt9da39oomvcjklvi6c.webp';
 
 
   const [bgImage, setBgImage] = useState(defaultBgImage);
   const [bgImage1, setBgImage1] = useState(defaultBgImage1);
   const [bgImage2, setBgImage2] = useState(defaultBgImage2);
-  const [bgImage3, setBgImage3] = useState(defaultBgImage3);
+  // const [bgImage3, setBgImage3] = useState(defaultBgImage3);
 
   return (
     <>
@@ -142,7 +142,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Reviews Cards"
+                        href="/product?id=65855d8e6834bc74637db118"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -196,7 +196,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Social Media Cards"
+                        href="product?id=6696707be53994f0bf8453ae"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -244,7 +244,7 @@ export default function Test() {
                       </a>
                     </div>
                   </div>
-                  <div
+                  {/* <div
                     className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
                     data-product-grid-item=""
                     data-slide={0}
@@ -303,7 +303,7 @@ export default function Test() {
                         </p>
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

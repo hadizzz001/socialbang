@@ -33,7 +33,7 @@ const createOrder = async () => {
   await createOrder();
   // Send the email with the provided HTML content
   await resend.emails.send({
-    from: "info@socialtapnfc.au",
+    from: "info@sibon.hadizproductions.com",
     to: "socialtapnfc.au@gmail.com",
     subject: "New Order",
     html: htmlContent

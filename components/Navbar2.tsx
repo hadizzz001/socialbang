@@ -358,7 +358,7 @@ function NavBar() {
                           </span>
                         </a>
                       </li>
-                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                      {/* <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
                           href="/search?cat=Tags"
@@ -377,7 +377,7 @@ function NavBar() {
                             Tags
                           </span>
                         </a>
-                      </li>
+                      </li> */}
                       <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
@@ -398,7 +398,7 @@ function NavBar() {
                           </span>
                         </a>
                       </li>
-                      <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
+                      {/* <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
                           href="/search?cat=Stickers"
@@ -417,7 +417,7 @@ function NavBar() {
                             Stickers
                           </span>
                         </a>
-                      </li>
+                      </li> */}
                       <li className="br_group/sub-item br_break-inside-avoid xl:pointer-fine:br_w-[10vw] xl:pointer-fine:br_max-w-[120px] xl:pointer-fine:br_text-center">
                         <a
                           className="br_block br_py-2 br_text-grey-500 br_no-underline br_text-base-sans-stretched hover:br_text-orange active:br_text-orange xl:pointer-fine:br_relative xl:pointer-fine:br_py-0 xl:pointer-fine:br_flex xl:pointer-fine:br_flex-col xl:pointer-fine:br_gap-1 xl:pointer-fine:br_items-center"
