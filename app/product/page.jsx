@@ -22,6 +22,7 @@ const page = () => {
   const [isActive1, setIsActive1] = useState(true);
   const [isActive2, setIsActive2] = useState(true);
   const [allTemp1, setTemp1] = useState()
+  const [allTemp11, setTemp11] = useState()
   const [allTemp2, setTemp2] = useState()
   const [value, setValue] = useState('');
   const [inputs, setInputs] = useState();
@@ -32,7 +33,7 @@ const page = () => {
   const searchParams = useSearchParams()
   const search = searchParams.get('id')
   const custom = searchParams.get('custom')
-  let content, ttype, imgs, title, price, desc, cat
+  let content, ttype, imgs, title, price, desc, cat,price2,price1,price3 
   const { cart, addToCart } = useCart();
   const { isBooleanValue, setBooleanValue } = useBooleanValue();
   const targetRef = useRef(null);
@@ -87,23 +88,34 @@ const page = () => {
   const a = async () => {
     b = await fetchTemp4(search)
     setTemp1(b)
+    setTemp11(b)
 
   }
   useEffect(() => {
     a()
   }, [])
+ 
+ 
+    if (allTemp1) {
+      imgs = allTemp1.img;
+      ttype = allTemp1.type;
+      cat = allTemp1.category;
+      title = allTemp1.title;  
+      desc = allTemp1.description;
+      price = allTemp1.price; 
+    } 
 
-  if (allTemp1) {
-    imgs = allTemp1.img
-    ttype = allTemp1.type
-    cat = allTemp1.category
-    title = allTemp1.title
-    price = allTemp1.price
-    desc = allTemp1.description
-  }
 
 
+  
+      if (allTemp11) {
+        price1 = allTemp11.price; 
+        price2 = allTemp11.price2; 
+        price3 = allTemp11.price3; 
+      } 
 
+
+ 
 
 
 
@@ -286,15 +298,15 @@ const page = () => {
 
     switch (selectedIndex) {
       case 1: // Index 1 corresponds to 'White card - Logo'
-        setTemp1((prevState) => ({ ...prevState, price: '15' }));
+        setTemp1((prevState) => ({ ...prevState, price: price2 }));
         setInputs((prevState) => ({ ...prevState, card_option: 'White card - Logo' }));
         break;
       case 2: // Index 2 corresponds to 'Full Colour card'
-        setTemp1((prevState) => ({ ...prevState, price: '20' }));
+        setTemp1((prevState) => ({ ...prevState, price: price3 }));
         setInputs((prevState) => ({ ...prevState, card_option: 'Full Colour card' }));
         break;
       default: // Default case or index 0 corresponds to 'White card - Name'
-        setTemp1((prevState) => ({ ...prevState, price: '9' }));
+        setTemp1((prevState) => ({ ...prevState, price: price1 }));
         setInputs((prevState) => ({ ...prevState, card_option: 'White card - Name' }));
         break;
     }
@@ -316,10 +328,10 @@ const page = () => {
     if (!allTemp1) return;
 
     if (newOption === 'black') {
-      setTemp1(prevState => ({ ...prevState, price: '15' }));
+      setTemp1(prevState => ({ ...prevState, price: price2 }));
       setInputs((prevState) => ({ ...prevState, color: 'black' }));
     } else {
-      setTemp1(prevState => ({ ...prevState, price: '9' }));
+      setTemp1(prevState => ({ ...prevState, price: price1 }));
       setInputs((prevState) => ({ ...prevState, color: 'white' }));
     }
   };
