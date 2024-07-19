@@ -83,7 +83,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link"
-                        href="/search?type=Review Stands"
+                        href="/product?id=658562fb6834bc74637db148"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -113,7 +113,7 @@ export default function Test() {
                     >
                       <a
                         className="product-link product-link--info"
-                        href="/search?type=Review Stands"
+                        href="/product?id=658562fb6834bc74637db148"
                         aria-label="Brothers Dopp Kit Duo . Brownish"
                         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
                       >
@@ -125,7 +125,7 @@ export default function Test() {
                       </a>
                     </div>
                   </div>
-                  <div
+                  {/* <div
                     className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
                     data-product-grid-item=""
                     data-slide={0}
@@ -179,7 +179,7 @@ export default function Test() {
                         </p>
                       </a>
                     </div>
-                  </div> 
+                  </div>  */}
                 </div>
               </div>
             </div>
