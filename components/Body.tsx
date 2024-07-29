@@ -99,14 +99,14 @@ const Body = () => {
             
             <Image
               className="wallet-image desktop"
-              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952784/wvl2fayuv06gcds8jrmn.webp"
+              src="https://ucarecdn.com/169979dd-de74-448b-a96a-834fd678b859/_1580x540pxforlaptops.webp"
               alt="background"
               fill
  
             />
             <Image
               className="wallet-image mobile"
-              src="https://res.cloudinary.com/duppvjinz/image/upload/v1710874485/driq7bfudzttnbkogjst.webp"
+              src="https://ucarecdn.com/54d917b5-cd97-4aaf-a6b0-0b5aa735f329/CopyofmobileVersion1000x1000px.webp"
               alt="background"
               fill
               

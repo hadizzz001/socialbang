@@ -33,7 +33,7 @@ const page = () => {
   const searchParams = useSearchParams()
   const search = searchParams.get('id')
   const custom = searchParams.get('custom')
-  let content, ttype, imgs, title, price, desc, cat,price2,price1,price3 
+  let content, ttype, imgs, title, price, desc, cat, price2, price1, price3, price4, price5
   const { cart, addToCart } = useCart();
   const { isBooleanValue, setBooleanValue } = useBooleanValue();
   const targetRef = useRef(null);
@@ -94,28 +94,30 @@ const page = () => {
   useEffect(() => {
     a()
   }, [])
- 
- 
-    if (allTemp1) {
-      imgs = allTemp1.img;
-      ttype = allTemp1.type;
-      cat = allTemp1.category;
-      title = allTemp1.title;  
-      desc = allTemp1.description;
-      price = allTemp1.price; 
-    } 
+
+
+  if (allTemp1) {
+    imgs = allTemp1.img;
+    ttype = allTemp1.type;
+    cat = allTemp1.category;
+    title = allTemp1.title;
+    desc = allTemp1.description;
+    price = allTemp1.price;
+  }
 
 
 
-  
-      if (allTemp11) {
-        price1 = allTemp11.price; 
-        price2 = allTemp11.price2; 
-        price3 = allTemp11.price3; 
-      } 
+
+  if (allTemp11) {
+    price1 = allTemp11.price;
+    price2 = allTemp11.price2;
+    price3 = allTemp11.price3;
+    price4 = allTemp11.price4;
+    price5 = allTemp11.price5;
+  }
 
 
- 
+
 
 
 
@@ -289,7 +291,7 @@ const page = () => {
 
 
   const handleSelectChange1 = (selectedIndex) => {
-    const newOption = event.target.value; 
+    const newOption = event.target.value;
 
     setSelectedOption1(newOption);
     handleClick(selectedIndex);
@@ -299,10 +301,18 @@ const page = () => {
     switch (selectedIndex) {
       case 1: // Index 1 corresponds to 'White card - Logo'
         setTemp1((prevState) => ({ ...prevState, price: price2 }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'Black card - Name' }));
+        break;
+      case 2: // Index 1 corresponds to 'White card - Logo'
+        setTemp1((prevState) => ({ ...prevState, price: price3 }));
         setInputs((prevState) => ({ ...prevState, card_option: 'White card - Logo' }));
         break;
-      case 2: // Index 2 corresponds to 'Full Colour card'
-        setTemp1((prevState) => ({ ...prevState, price: price3 }));
+      case 3: // Index 1 corresponds to 'White card - Logo'
+        setTemp1((prevState) => ({ ...prevState, price: price4 }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'Black card - Logo' }));
+        break;
+      case 4: // Index 2 corresponds to 'Full Colour card'
+        setTemp1((prevState) => ({ ...prevState, price: price5 }));
         setInputs((prevState) => ({ ...prevState, card_option: 'Full Colour card' }));
         break;
       default: // Default case or index 0 corresponds to 'White card - Name'
@@ -330,6 +340,10 @@ const page = () => {
     if (newOption === 'black') {
       setTemp1(prevState => ({ ...prevState, price: price2 }));
       setInputs((prevState) => ({ ...prevState, color: 'black' }));
+    }
+    else if (newOption === 'Full colour') {
+      setTemp1(prevState => ({ ...prevState, price: price3 }));
+      setInputs((prevState) => ({ ...prevState, color: 'Full colour' }));
     } else {
       setTemp1(prevState => ({ ...prevState, price: price1 }));
       setInputs((prevState) => ({ ...prevState, color: 'white' }));
@@ -421,22 +435,22 @@ const page = () => {
 
 
           <div className="form-group ">
-            
-              <p>Choose front picture</p>
-              <Dropzone HandleImagesChange={handleImgChange} className='border border-neutral-200 p-16  ' />
 
-            
+            <p>Choose front picture</p>
+            <Dropzone HandleImagesChange={handleImgChange} className='border border-neutral-200 p-16  ' />
+
+
           </div>
 
 
 
 
           <div className="form-group ">
-             
-              <p>Choose Back picture</p>
-              <Dropzonee HandleImagesChange={handleImgChangee} className=' border border-neutral-200 p-16  ' />
 
-             
+            <p>Choose Back picture</p>
+            <Dropzonee HandleImagesChange={handleImgChangee} className=' border border-neutral-200 p-16  ' />
+
+
           </div>
 
           <div className="form-group  pt-2">
@@ -449,7 +463,9 @@ const page = () => {
                 style={{ width: '100%', padding: '.5em' }}
               >
                 <option value="White card - Name">White card - Name</option>
+                <option value="Black card - Name">Black card - Name</option>
                 <option value="White card - Logo">White card - Logo</option>
+                <option value="Black card - Logo">Black card - Logo</option>
                 <option value="Full Colour card">Full Colour card</option>
               </select>
             </div>
@@ -571,6 +587,7 @@ const page = () => {
               <select value={selectedOption} onChange={(event) => handleSelectChange(event.target.selectedIndex)} style={{ width: '100%', padding: '.5em' }}>
                 <option value="white">White</option>
                 <option value="black">Black</option>
+                <option value="Full colour">Full Colour</option>
               </select>
             </div>
 
@@ -1363,7 +1380,7 @@ const page = () => {
       <div className="">
         <div className=""></div>
         <div className="">
-          <div className="form-group ">
+          {/* <div className="form-group ">
             <div className="">
 
 
@@ -1407,7 +1424,7 @@ const page = () => {
 
 
             </div>
-          </div>
+          </div> */}
 
 
 
@@ -1425,6 +1442,17 @@ const page = () => {
                 onChange={handleChange}
                 required
               />
+            </div>
+
+          </div>
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p className='mb-2'>Color</p>
+              <select value={selectedOption} onChange={(event) => handleSelectChange(event.target.selectedIndex)} style={{ width: '100%', padding: '.5em' }}>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+              </select>
             </div>
 
           </div>
@@ -1923,8 +1951,11 @@ const page = () => {
 
 
 
-
-
+  useEffect(() => {
+    if (ttype === 'Business Cards') {
+      handleClick(5);
+    }
+  }, [ttype]);
 
 
   return (
