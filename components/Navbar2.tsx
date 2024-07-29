@@ -390,7 +390,7 @@ function NavBar() {
                               className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
                               loading="lazy"
                               sizes="100vw"
-                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1705952516/akxxwxewhxemx6x2tqb8.webp?auto=format&fit=max"
+                              src="https://res.cloudinary.com/duppvjinz/image/upload/v1722264825/llzlwxlcyloh2c0krxrc.webp?auto=format&fit=max"
                             />
                           </figure>
                           <span>
