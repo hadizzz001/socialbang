@@ -527,7 +527,7 @@ const page = () => {
             <b className='mb-2' style={{ fontWeight: "900", fontSize: "large" }}>Add your personalisation </b>
             <p style={{ fontSize: "small" }}>Please provide:</p>
             <p style={{ fontSize: "small" }}>- Full name and any text details that you want to be printed on the card.</p>
-            <p style={{ fontSize: "small" }}>- If you choose the option for a card with a logo, please send us the logo file with a transparent background in a message via Social Tap.</p>
+            <p style={{ fontSize: "small" }}>- If you choose the option for a card with a logo, please send us the logo file with a transparent background in a message via Hadiz Productions.</p>
             <div className="">
               <textarea
                 className="form-control"

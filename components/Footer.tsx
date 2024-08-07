@@ -551,7 +551,7 @@ const Footer = () => {
                             </div>
                             <div className="column">
                                 <span className="copyright">
-                                    All rights reserved © {(new Date().getFullYear())} Social Tap
+                                    All rights reserved © {(new Date().getFullYear())} Hadiz Productions
                                 </span>
                             </div>
                         </div>

@@ -36,16 +36,16 @@ console.log("pathname: ",pathname);
   />
   <meta content="max-image-preview:large" name="robots" />
   <title>
-    Social Tap
+    Hadiz Productions
   </title>
   <meta
-    content="At Social Tap, we're reshaping the way businesses connect."
+    content="At Hadiz Productions, we're reshaping the way businesses connect."
     name="description"
     property=""
   />
   <meta content="Socialtap" name="keywords" property="" />
   <meta
-    content="Social Tap"
+    content="Hadiz Productions"
     name=""
     property="og:title"
   />
@@ -56,7 +56,7 @@ console.log("pathname: ",pathname);
   />
   <meta content="website" name="" property="og:type" />
   <meta
-    content="At Social Tap, we're reshaping the way businesses connect."
+    content="At Hadiz Productions, we're reshaping the way businesses connect."
     name=""
     property="og:description"
   />
