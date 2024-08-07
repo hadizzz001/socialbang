@@ -129,7 +129,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.instagram.com/socialtapnfc.au/"
+                                    href="#"
                                     data-auto-id="true"
                                     id="page-footer-http-www-instagram-com-bellroy-1"
                                 >
