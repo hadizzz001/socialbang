@@ -1062,7 +1062,7 @@ export default function Home() {
     <span style={{ fontFamily: '"Segoe UI",sans-serif', color: "#292929" }}>
       For more information about our privacy practices, if you have questions,
       or if you would like to make a complaint, please contact us by e-mail at
-      info@socialtapnfc.au
+      info@hadizproductions.com
     </span>
   </p>
 </>

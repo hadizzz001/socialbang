@@ -170,7 +170,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.facebook.com/socialtapnfc.au/"
+                                    href="#"
                                     data-auto-id="true"
                                     id="page-footer-https-www-facebook-com-bellroy-official-1"
                                 >
@@ -192,7 +192,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.tiktok.com/@socialtapnfc.au"
+                                    href="#"
                                     data-auto-id="true"
                                     id="page-footer-https-www-tiktok-com-bellroy-official-1"
                                 >
@@ -313,7 +313,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://wa.me/61493310824"
+                                    href="#"
                                     data-auto-id="true"
                                     id="page-footer-https-www-youtube-com-channel-ucy6vodc_wyzj4rlslixgp1q-1"
                                 >
@@ -540,11 +540,11 @@ const Footer = () => {
                                     <span>
                                         Contact{" "}
                                         <a
-                                            href="mailto:info@socialtapnfc.au"
+                                            href="mailto:info@hadizproductions.com"
                                             data-auto-id="true"
                                             id="page-footer-mailto-support-bellroy-com-1"
                                         >
-                                            info@socialtapnfc.au
+                                            info@hadizproductions.com
                                         </a>
                                     </span>
                                 </p>

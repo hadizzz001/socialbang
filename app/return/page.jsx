@@ -84,7 +84,7 @@ export default function Home() {
     }}
   >
     <span style={{ fontFamily: '"Segoe UI",sans-serif', color: "#292929" }}>
-      You can always contact us for any return question at info@socialtapnfc.au.
+      You can always contact us for any return question at info@hadizproductions.com.
     </span>
   </p>
   <p

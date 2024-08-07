@@ -767,9 +767,9 @@ export default function Home() {
       , you agree to these Terms and Conditions. If you have any questions or
       concerns, please contact us at&nbsp;
     </span>
-    <a href="mailto:info@socialtapnfc.au">
+    <a href="mailto:info@hadizproductions.com">
       <span style={{ fontFamily: '"Times New Roman",serif' }}>
-        info@socialtapnfc.au
+        info@hadizproductions.com
       </span>
     </a>
     <span style={{ fontFamily: '"Times New Roman",serif' }}>.</span>
