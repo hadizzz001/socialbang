@@ -35,11 +35,11 @@ export async function createCheckoutSession(
         },
       ],
       ...(ui_mode === "hosted" && {
-        success_url: "https://socialtapnfc.au/done",
-        cancel_url: "https://socialtapnfc.au/checkout",
+        success_url: "https://hadizproductions.comdone",
+        cancel_url: "https://hadizproductions.comcheckout",
       }),
       ...(ui_mode === "embedded" && {
-        return_url: "https://socialtapnfc.au/done",
+        return_url: "https://hadizproductions.comdone",
       }),
       ui_mode,
     });

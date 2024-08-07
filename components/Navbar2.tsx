@@ -218,7 +218,7 @@ function NavBar() {
             data-auto-id="true"
             id="page-header-homepage-1"
           >
-            <img src="https://res.cloudinary.com/duppvjinz/image/upload/v1700912468/ewehtbukhvujafl3zm6d.png" alt="" width={100} />
+            <img src="https://res.cloudinary.com/dgqwmt32h/image/upload/w_200/v1706367128/xe5x0djilxgtivvzztez.png" alt="" style={{marginTop:"3em"}} width={100} />
           </a>
           <button id='hamburger' className="hamburger xl:pointer-fine:br_invisible" onClick={handleClick}>
             <span />
