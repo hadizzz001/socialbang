@@ -36,7 +36,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/_app.tsx"
-, "components/Review.jsx", "components/Rate.js", "app/shop/page.jsx", "app/post/page.jsx", "app/faq/page.jsx", "app/api/checkout/route.js", "app/api/create-intent/route.tsx"  ],
+, "components/Review.jsx", "components/Rate.js", "app/shop/page.jsx", "app/post/page.jsx", "app/faq/page.jsx", "app/api/checkout/route.js", "app/api/create-intent/route.tsx", "app/context/PageTypeContext.js"  ],
   "exclude": [
     "node_modules"
   ]

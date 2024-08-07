@@ -1,13 +1,13 @@
 "use client"
 import { useState, useEffect } from 'react';
 
-const GifLoader = () => {
+const GifLoader = ({amount}) => {
   const [showGif, setShowGif] = useState(true);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowGif(false);
-    }, 2000);
+    }, amount);
 
     // Cleanup the timeout when the component unmounts
     return () => clearTimeout(timeoutId);

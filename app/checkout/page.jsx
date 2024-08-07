@@ -17,7 +17,7 @@ import ElementsForm from "@/components/ElementsForm";
 const page = () => {
   const [isBooleanValue2, setBooleanValue2] = useState(false);
   const [selectedDialCode, setSelectedDialCode] = useState('+61'); // Initial dial code
-  const [selectedOption, setSelectedOption] = useState(7.5);
+  const [selectedOption, setSelectedOption] = useState(10.5);
   const [allTemp, setTemp] = useState()
   const { cart, removeFromCart, quantities, subtotal, addToCart } = useCart();
   const [localQuantities, setLocalQuantities] = useState(quantities);
@@ -4691,7 +4691,7 @@ const page = () => {
 
                                     <div>
                                       {/* <RadioOption option={0} label="Free shipping (3-6 days)" /> */}
-                                      <RadioOption option={7.5} label="Express Post (1-2 days)" />
+                                      <RadioOption option={10.5} label="Express Shipping (3-5 business days)" />
 
 
                                     </div>
@@ -4828,7 +4828,7 @@ const page = () => {
                                                               <span className="woocommerce-Price-currencySymbol">
                                                                 $
                                                               </span>
-                                                              7.50
+                                                              10.5
                                                             </bdi>
                                                           </span>
                                                         </span>
@@ -4852,7 +4852,7 @@ const page = () => {
                                                             <span className="woocommerce-Price-currencySymbol">
                                                               $
                                                             </span>
-                                                            {selectedOption !== 0 ? (subtotal + 7.50).toFixed(2) : subtotal.toFixed(2)}
+                                                            {selectedOption !== 0 ? (subtotal + 10.50).toFixed(2) : subtotal.toFixed(2)}
                                                           </bdi>
                                                         </span>
                                                       </strong>{" "}

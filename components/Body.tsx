@@ -13,6 +13,7 @@ import Image from 'next/image';
 
 
 const Body = () => {
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])

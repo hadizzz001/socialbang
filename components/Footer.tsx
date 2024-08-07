@@ -129,7 +129,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.instagram.com/socialtap.nfc/"
+                                    href="https://www.instagram.com/socialtapnfc.au/"
                                     data-auto-id="true"
                                     id="page-footer-http-www-instagram-com-bellroy-1"
                                 >
@@ -139,27 +139,38 @@ const Footer = () => {
                                         height="20px"
                                     >
                                         <title>Instagram</title>
+                                        <defs>
+                                            <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style={{ stopColor: "#f09433", stopOpacity: 1 }} />
+                                                <stop offset="25%" style={{ stopColor: "#e6683c", stopOpacity: 1 }} />
+                                                <stop offset="50%" style={{ stopColor: "#dc2743", stopOpacity: 1 }} />
+                                                <stop offset="75%" style={{ stopColor: "#cc2366", stopOpacity: 1 }} />
+                                                <stop offset="100%" style={{ stopColor: "#bc1888", stopOpacity: 1 }} />
+                                            </linearGradient>
+                                        </defs>
                                         <path
-                                            className="st0"
-                                            d="M21.3,14.4c-3.8,0-6.9,3.1-6.9,6.9c0,3.8,3.1,6.9,6.9,6.9c3.8,0,6.9-3.1,6.9-6.9c0,0,0,0,0,0 C28.3,17.5,25.2,14.4,21.3,14.4C21.3,14.4,21.3,14.4,21.3,14.4z"
+                                            fill="url(#instagramGradient)"
+                                            d="M21.3,14.4c-3.8,0-6.9,3.1-6.9,6.9c0,3.8,3.1,6.9,6.9,6.9c3.8,0,6.9-3.1,6.9-6.9c0,0,0,0,0,0
+      C28.3,17.5,25.2,14.4,21.3,14.4C21.3,14.4,21.3,14.4,21.3,14.4z"
                                         />
                                         <path
-                                            className="st0"
+                                            fill="url(#instagramGradient)"
                                             d="M43.9,12.9c0-1.8-0.4-3.6-1-5.3c-0.6-1.5-1.4-2.8-2.5-3.9c-1.1-1.1-2.4-2-3.9-2.5c-1.7-0.6-3.5-1-5.3-1
-              C28.7,0,28,0,22,0s-6.7,0-9.1,0.1c-1.8,0-3.6,0.4-5.3,1C6.1,1.7,4.8,2.6,3.7,3.7c-1.1,1.1-2,2.4-2.5,3.9c-0.6,1.7-1,3.5-1,5.3
-              C0,15.3,0,16,0,22s0,6.7,0.1,9.1c0,1.8,0.4,3.6,1,5.3c0.6,1.5,1.4,2.8,2.5,3.9c1.1,1.1,2.4,2,3.9,2.5c1.7,0.6,3.5,1,5.3,1
-              C15.3,44,16,44,22,44s6.7,0,9.1-0.1c1.8,0,3.6-0.4,5.3-1c1.5-0.6,2.8-1.4,3.9-2.5c1.1-1.1,2-2.4,2.5-3.9c0.6-1.7,1-3.5,1-5.3
-              C44,28.7,44,28,44,22S44,15.3,43.9,12.9z M21.3,32c-5.9,0-10.7-4.8-10.7-10.7s4.8-10.7,10.7-10.7S32,15.4,32,21.3S27.2,32,21.3,32
-              L21.3,32z M35.3,13.3c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3c1.8,0,3.3,1.5,3.3,3.3C38.7,11.8,37.2,13.3,35.3,13.3
-              C35.3,13.3,35.3,13.3,35.3,13.3z"
+    C28.7,0,28,0,22,0s-6.7,0-9.1,0.1c-1.8,0-3.6,0.4-5.3,1C6.1,1.7,4.8,2.6,3.7,3.7c-1.1,1.1-2,2.4-2.5,3.9c-0.6,1.7-1,3.5-1,5.3
+    C0,15.3,0,16,0,22s0,6.7,0.1,9.1c0,1.8,0.4,3.6,1,5.3c0.6,1.5,1.4,2.8,2.5,3.9c1.1,1.1,2.4,2,3.9,2.5c1.7,0.6,3.5,1,5.3,1
+    C15.3,44,16,44,22,44s6.7,0,9.1-0.1c1.8,0,3.6-0.4,5.3-1c1.5-0.6,2.8-1.4,3.9-2.5c1.1-1.1,2-2.4,2.5-3.9c0.6-1.7,1-3.5,1-5.3
+    C44,28.7,44,28,44,22S44,15.3,43.9,12.9z M21.3,32c-5.9,0-10.7-4.8-10.7-10.7s4.8-10.7,10.7-10.7S32,15.4,32,21.3S27.2,32,21.3,32
+    L21.3,32z M35.3,13.3c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3c1.8,0,3.3,1.5,3.3,3.3C38.7,11.8,37.2,13.3,35.3,13.3
+    C35.3,13.3,35.3,13.3,35.3,13.3z"
                                         />
                                     </svg>
+
                                 </a>
                             </li>
                             <li>
                                 <a
                                     target="_blank"
-                                    href="https://www.facebook.com/socialtap.nfc"
+                                    href="https://www.facebook.com/socialtapnfc.au/"
                                     data-auto-id="true"
                                     id="page-footer-https-www-facebook-com-bellroy-official-1"
                                 >
@@ -171,10 +182,132 @@ const Footer = () => {
                                     >
                                         <title>Facebook</title>
                                         <path
-                                            className="st0"
-                                            d="M14.3,44V23.9h6.5l1-7.8h-7.5v-5c0-2.3,0.6-3.8,3.7-3.8h4v-7C20.1,0.1,18.1,0,16.2,0c-5.8,0-9.7,3.7-9.7,10.3 v5.8H0v7.8h6.5V44H14.3z"
+                                            d="M14.3,44V23.9h6.5l1-7.8h-7.5v-5c0-2.3,0.6-3.8,3.7-3.8h4v-7C20.1,0.1,18.1,0,16.2,0c-5.8,0-9.7,3.7-9.7,10.3v5.8H0v7.8h6.5V44H14.3z"
+                                            fill="#1877F2"
                                         />
                                     </svg>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.tiktok.com/@socialtapnfc.au"
+                                    data-auto-id="true"
+                                    id="page-footer-https-www-tiktok-com-bellroy-official-1"
+                                >
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  width={20}
+  height={20}
+  viewBox="0 0 256 256"
+  xmlSpace="preserve"
+>
+  <defs></defs>
+  <g
+    style={{
+      stroke: "none",
+      strokeWidth: 0,
+      strokeDasharray: "none",
+      strokeLinecap: "butt",
+      strokeLinejoin: "miter",
+      strokeMiterlimit: 10,
+      fill: "none",
+      fillRule: "nonzero",
+      opacity: 1
+    }}
+    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+  >
+    <path
+      d="M 36.203 35.438 v -3.51 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -15.047 0 -27.289 12.244 -27.289 27.291 c 0 9.23 4.613 17.401 11.65 22.342 c -4.712 -5.039 -7.332 -11.681 -7.328 -18.58 C 9.559 47.88 21.453 35.784 36.203 35.438"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "rgb(0,242,234)",
+        fillRule: "nonzero",
+        opacity: 1
+      }}
+      transform=" matrix(1 0 0 1 0 0) "
+      strokeLinecap="round"
+    />
+    <path
+      d="M 36.847 75.175 c 6.714 0 12.19 -5.341 12.44 -11.997 l 0.023 -59.417 h 10.855 c -0.232 -1.241 -0.349 -2.5 -0.35 -3.762 H 44.989 l -0.025 59.419 c -0.247 6.654 -5.726 11.993 -12.438 11.993 c -2.015 0.001 -4 -0.49 -5.782 -1.431 C 29.079 73.238 32.839 75.171 36.847 75.175 M 80.441 23.93 v -3.302 c -3.989 0.004 -7.893 -1.157 -11.232 -3.339 c 2.928 3.371 6.869 5.701 11.234 6.641"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "rgb(0,242,234)",
+        fillRule: "nonzero",
+        opacity: 1
+      }}
+      transform=" matrix(1 0 0 1 0 0) "
+      strokeLinecap="round"
+    />
+    <path
+      d="M 69.209 17.286 c -3.272 -3.744 -5.075 -8.549 -5.073 -13.522 h -3.972 C 61.203 9.318 64.472 14.205 69.209 17.286 M 32.526 46.486 c -6.88 0.008 -12.455 5.583 -12.463 12.463 c 0.004 4.632 2.576 8.88 6.679 11.032 c -1.533 -2.114 -2.358 -4.657 -2.358 -7.268 c 0.007 -6.88 5.582 -12.457 12.463 -12.465 c 1.284 0 2.515 0.212 3.677 0.577 V 35.689 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -0.216 0 -0.429 0.012 -0.643 0.016 v 11.626 C 35.014 46.685 33.774 46.49 32.526 46.486"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "rgb(255,0,79)",
+        fillRule: "nonzero",
+        opacity: 1
+      }}
+      transform=" matrix(1 0 0 1 0 0) "
+      strokeLinecap="round"
+    />
+    <path
+      d="M 80.441 23.93 v 11.523 c -7.689 0 -14.81 -2.459 -20.627 -6.633 v 30.13 c 0 15.047 -12.24 27.289 -27.287 27.289 c -5.815 0 -11.207 -1.835 -15.639 -4.947 c 5.151 5.555 12.384 8.711 19.959 8.709 c 15.047 0 27.289 -12.242 27.289 -27.287 v -30.13 c 6.009 4.321 13.226 6.642 20.627 6.633 V 24.387 c -1.484 0 -2.927 -0.161 -4.323 -0.46"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "rgb(255,0,79)",
+        fillRule: "nonzero",
+        opacity: 1
+      }}
+      transform=" matrix(1 0 0 1 0 0) "
+      strokeLinecap="round"
+    />
+    <path
+      d="M 59.813 58.949 v -30.13 c 6.009 4.322 13.226 6.642 20.627 6.633 V 23.93 c -4.364 -0.941 -8.305 -3.272 -11.232 -6.644 c -4.737 -3.081 -8.006 -7.968 -9.045 -13.522 H 49.309 l -0.023 59.417 c -0.249 6.654 -5.726 11.995 -12.44 11.995 c -4.007 -0.004 -7.768 -1.938 -10.102 -5.194 c -4.103 -2.151 -6.676 -6.399 -6.681 -11.032 c 0.008 -6.88 5.583 -12.455 12.463 -12.463 c 1.282 0 2.513 0.21 3.677 0.577 V 35.438 C 21.453 35.784 9.559 47.88 9.559 62.713 c 0 7.173 2.787 13.703 7.328 18.58 c 4.578 3.223 10.041 4.95 15.639 4.945 C 47.574 86.238 59.813 73.996 59.813 58.949"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "rgb(255,255,255)",
+        fillRule: "nonzero",
+        opacity: 1
+      }}
+      transform=" matrix(1 0 0 1 0 0) "
+      strokeLinecap="round"
+    />
+  </g>
+</svg>
+
+
+
+
+
+
                                 </a>
                             </li>
                             <li>
@@ -185,20 +318,41 @@ const Footer = () => {
                                     id="page-footer-https-www-youtube-com-channel-ucy6vodc_wyzj4rlslixgp1q-1"
                                 >
                                     <svg
-                                        id="Layer_1"
-                                        data-name="Layer 1"
+                                        width="20px"
+                                        height="20px"
+                                        viewBox="0 0 48 48"
+                                        version="1.1"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 176 124"
-                                        height="22px"
+                                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                                        fill="#000000"
                                     >
-                                        <title>WhatsApp</title>
-                                        <svg fill="#000000" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier"><path d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z"></path>
-                                        <path d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z"></path></g></svg>
-
+                                        <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+                                        <g id="SVGRepo_iconCarrier">
+                                            {" "}
+                                            <title>Whatsapp</title>
+                                            <defs> </defs>{" "}
+                                            <g id="Icons" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+                                                {" "}
+                                                <g
+                                                    id="Color-"
+                                                    transform="translate(-700.000000, -360.000000)"
+                                                    fill="#67C15E"
+                                                >
+                                                    {" "}
+                                                    <path
+                                                        d="M723.993033,360 C710.762252,360 700,370.765287 700,383.999801 C700,389.248451 701.692661,394.116025 704.570026,398.066947 L701.579605,406.983798 L710.804449,404.035539 C714.598605,406.546975 719.126434,408 724.006967,408 C737.237748,408 748,397.234315 748,384.000199 C748,370.765685 737.237748,360.000398 724.006967,360.000398 L723.993033,360.000398 L723.993033,360 Z M717.29285,372.190836 C716.827488,371.07628 716.474784,371.034071 715.769774,371.005401 C715.529728,370.991464 715.262214,370.977527 714.96564,370.977527 C714.04845,370.977527 713.089462,371.245514 712.511043,371.838033 C711.806033,372.557577 710.056843,374.23638 710.056843,377.679202 C710.056843,381.122023 712.567571,384.451756 712.905944,384.917648 C713.258648,385.382743 717.800808,392.55031 724.853297,395.471492 C730.368379,397.757149 732.00491,397.545307 733.260074,397.27732 C735.093658,396.882308 737.393002,395.527239 737.971421,393.891043 C738.54984,392.25405 738.54984,390.857171 738.380255,390.560912 C738.211068,390.264652 737.745308,390.095816 737.040298,389.742615 C736.335288,389.389811 732.90737,387.696673 732.25849,387.470894 C731.623543,387.231179 731.017259,387.315995 730.537963,387.99333 C729.860819,388.938653 729.198006,389.89831 728.661785,390.476494 C728.238619,390.928051 727.547144,390.984595 726.969123,390.744481 C726.193254,390.420348 724.021298,389.657798 721.340985,387.273388 C719.267356,385.42535 717.856938,383.125756 717.448104,382.434484 C717.038871,381.729275 717.405907,381.319529 717.729948,380.938852 C718.082653,380.501232 718.421026,380.191036 718.77373,379.781688 C719.126434,379.372738 719.323884,379.160897 719.549599,378.681068 C719.789645,378.215575 719.62006,377.735746 719.450874,377.382942 C719.281687,377.030139 717.871269,373.587317 717.29285,372.190836 Z"
+                                                        id="Whatsapp"
+                                                    >
+                                                        {" "}
+                                                    </path>{" "}
+                                                </g>{" "}
+                                            </g>{" "}
+                                        </g>
                                     </svg>
+
+
+
 
                                 </a>
                             </li>
@@ -224,7 +378,7 @@ const Footer = () => {
                                 />
                             </svg>
                         </h4>
-                        <ul> 
+                        <ul>
                             <li>
                                 <a
                                     href="/contact"
@@ -251,7 +405,25 @@ const Footer = () => {
                                 >
                                     Privacy Policy
                                 </a>
-                            </li> 
+                            </li>
+                            <li>
+                                <a
+                                    href="/ship"
+                                    data-auto-id="true"
+                                    id="page-footer-customer-care-privacy-policy-2"
+                                >
+                                    Shipping Information
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/return"
+                                    data-auto-id="true"
+                                    id="page-footer-customer-care-privacy-policy-2"
+                                >
+                                    Returns and Refunds
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -303,7 +475,7 @@ const Footer = () => {
 
                                     Social Media Cards
                                 </a>
-                            </li>  
+                            </li>
                             <li>
                                 <a
                                     href="/product?id=658562fb6834bc74637db148"
@@ -313,16 +485,7 @@ const Footer = () => {
                                     Review Stands
                                 </a>
                             </li>
-                            <li>
-                                <a
-                                    href="/product?id=6585631a6834bc74637db14b"
-                                    data-auto-id="true"
-                                    id="page-footer-collection-apex-1"
-                                >
-                                    Menu Stands
-                                </a>
-                            </li>
- 
+
                         </ul>
                     </div>
                     <div className="column collapsable-section" id='footId3' onClick={handleFoot3}>
@@ -353,7 +516,7 @@ const Footer = () => {
                                 >
                                     Our Story
                                 </a>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
                     <div className="column ">  </div>

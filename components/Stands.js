@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function Test() {
   const defaultBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1722264833/yd4hnaefyf52imolaeyy.webp';
-  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1722264825/llzlwxlcyloh2c0krxrc.webp';
+  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1722264833/jejrls3jdrirkiqt37qp.webp';
 
   const defaultBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1711995658/muorsebafne0soej61os.png';
   const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059974/o2rbyhdf3p7af8599hf5.webp';

@@ -422,7 +422,7 @@ const Body = () => {
                                                             </div>
                                                         </div>
                                                         <div style={{ textAlign: "center" }} className="initial:br_row-span-1 br_col-start-1 br_row-start-2 br_px-3 group-[.centered]/tile:br_justify-center group-[.centered]/tile:br_text-center">
-                                                            <h3 className="br_text-base-sans-spaced br_line-clamp-2 sm:br_line-clamp-none edition:br_text-grey-500 edition:br_hidden first:edition:br_inline edition:before:br_content-['_–_'] apex:edition:br_text-grey-300">
+                                                            <h2 className="br_text-base-sans-spaced br_line-clamp-2 sm:br_line-clamp-none edition:br_text-grey-900 edition:br_hidden first:edition:br_inline edition:before:br_content-['_–_'] apex:edition:br_text-grey-300 bolder" style={{fontWeight: "900",fontSize: "large"}}>
                                                                 <a
                                                                     href={`/product?id=${item.id}`}
                                                                     className="br_text-current br_no-underline"
@@ -431,16 +431,16 @@ const Body = () => {
                                                                     {item.title}
                                                                     <span className="br_absolute br_inset-0 br_z-10" aria-hidden="true" />
                                                                 </a>
-                                                            </h3>
-                                                            <div className="br_text-base-sans-bold-spaced br_text-grey-600 br_inline-flex br_flex-wrap br_gap-x-2 br_items-baseline apex:br_text-white group-[.centered]/tile:br_justify-center">
+                                                            </h2>
+                                                            {/* <div className="br_text-base-sans-bold-spaced br_text-grey-600 br_inline-flex br_flex-wrap br_gap-x-2 br_items-baseline apex:br_text-white group-[.centered]/tile:br_justify-center">
                                                                 {item.category}
                                                             </div>
                                                             <br />
                                                             <div className="br_text-base-sans-bold-spaced br_text-grey-600 br_inline-flex br_flex-wrap br_gap-x-2 br_items-baseline apex:br_text-white group-[.centered]/tile:br_justify-center">
                                                                 {item.type}
-                                                            </div>
+                                                            </div> */}
                                                             <br />
-                                                            <div className="br_text-base-sans-bold-spaced br_text-grey-600 br_inline-flex br_flex-wrap br_gap-x-2 br_items-baseline apex:br_text-white group-[.centered]/tile:br_justify-center">
+                                                            <div className="br_text-base-sans-bold-spaced br_text-grey-600 br_inline-flex br_flex-wrap br_gap-x-2 br_items-baseline apex:br_text-white group-[.centered]/tile:br_justify-center" style={{fontWeight: "900",fontSize: "large"}}>
                                                                 ${item.price}
                                                             </div>
                                                         </div>

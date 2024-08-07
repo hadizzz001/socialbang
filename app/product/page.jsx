@@ -11,14 +11,17 @@ import { fetchTemp4, fetchTemp1 } from '@/utils'
 import Dropzone1 from '../../components/Dropzone1'
 import Dropzone from '../../components/Dropzone'
 import Dropzonee from '../../components/Dropzonee'
+import Dropzoneee from '../../components/Dropzoneee'
 import { useCart } from '../context/CartContext';
 import { useBooleanValue } from '../context/CartBoolContext';
 import { useMyContext } from '../context/PDFContext';
 import Contact1 from '../../components/Contact1';
+import GifLoader from '@/components/GifLoader';
 
 
 const page = () => {
   const [translateXValue, setTranslateXValue] = useState(0);
+  const [isActive0, setIsActive0] = useState(true);
   const [isActive1, setIsActive1] = useState(true);
   const [isActive2, setIsActive2] = useState(true);
   const [allTemp1, setTemp1] = useState()
@@ -28,6 +31,7 @@ const page = () => {
   const [inputs, setInputs] = useState();
   const [imgz, setImgs] = useState('');
   const [imgzz, setImgss] = useState('');
+  const [logo, setImgsss] = useState('');
   let b
   let b2
   const searchParams = useSearchParams()
@@ -64,8 +68,8 @@ const page = () => {
 
 
   useEffect(() => {
-    setInputs((prevState) => ({ ...prevState, imgz: imgz[0], imgzz: imgzz[0] }));
-  }, [imgz, imgzz])
+    setInputs((prevState) => ({ ...prevState, imgz: imgz[0], imgzz: imgzz[0], logo: logo[0] }));
+  }, [imgz, imgzz, logo])
 
 
 
@@ -86,6 +90,7 @@ const page = () => {
 
 
   const a = async () => {
+
     b = await fetchTemp4(search)
     setTemp1(b)
     setTemp11(b)
@@ -169,6 +174,21 @@ const page = () => {
   };
 
 
+  const handleClick0 = () => {
+    var d2 = document.getElementById("howID");
+    setIsActive0(!isActive0)
+    if (d2) {
+      if (isActive0) {
+        d2.className += " DynamicAccordion_Tab--open";
+        d2.classList.remove("DynamicAccordion_Tab--closed");
+
+      }
+      else {
+        d2.className += " DynamicAccordion_Tab--closed";
+        d2.classList.remove("DynamicAccordion_Tab--open");
+      }
+    }
+  };
   const handleClick1 = () => {
     var d2 = document.getElementById("specID");
     setIsActive1(!isActive1)
@@ -259,6 +279,13 @@ const page = () => {
     }
   }
 
+
+  const handleImgChangeee = (url) => {
+    if (url) {
+      setImgsss(url);
+    }
+  }
+
   const gotocart = () => {
     router.push('/checkout');
   };
@@ -305,11 +332,11 @@ const page = () => {
         break;
       case 2: // Index 1 corresponds to 'White card - Logo'
         setTemp1((prevState) => ({ ...prevState, price: price3 }));
-        setInputs((prevState) => ({ ...prevState, card_option: 'White card - Logo' }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'White card - Name + Logo' }));
         break;
       case 3: // Index 1 corresponds to 'White card - Logo'
         setTemp1((prevState) => ({ ...prevState, price: price4 }));
-        setInputs((prevState) => ({ ...prevState, card_option: 'Black card - Logo' }));
+        setInputs((prevState) => ({ ...prevState, card_option: 'Black card - Name + Logo' }));
         break;
       case 4: // Index 2 corresponds to 'Full Colour card'
         setTemp1((prevState) => ({ ...prevState, price: price5 }));
@@ -347,6 +374,29 @@ const page = () => {
     } else {
       setTemp1(prevState => ({ ...prevState, price: price1 }));
       setInputs((prevState) => ({ ...prevState, color: 'white' }));
+    }
+  };
+
+
+
+
+  const [selectedOptionfb, setSelectedOptionfb] = useState('white');
+
+
+  const handleSelectChangefb = (selectedIndex) => {
+    const newOption = event.target.value;
+    setSelectedOption(newOption);
+    handleClick(selectedIndex)
+
+    if (!allTemp1) return;
+
+    if (newOption === 'Instagram') {
+      setInputs((prevState) => ({ ...prevState, platform: 'Instagram' }));
+    }
+    else if (newOption === 'Tiktok') {
+      setInputs((prevState) => ({ ...prevState, platform: 'Tiktok' }));
+    } else {
+      setInputs((prevState) => ({ ...prevState, platform: 'Facebook' }));
     }
   };
 
@@ -434,28 +484,27 @@ const page = () => {
 
 
 
-          <div className="form-group ">
-
-            <p>Choose front picture</p>
-            <Dropzone HandleImagesChange={handleImgChange} className='border border-neutral-200 p-16  ' />
-
-
-          </div>
-
-
-
-
-          <div className="form-group ">
-
-            <p>Choose Back picture</p>
-            <Dropzonee HandleImagesChange={handleImgChangee} className=' border border-neutral-200 p-16  ' />
-
-
-          </div>
+          {selectedOption1 === 'Full Colour card' ? (
+            <>
+              <div className="form-group">
+                <p style={{ fontWeight: "900", fontSize: "large" }}>Choose front picture</p>
+                <Dropzone HandleImagesChange={handleImgChange} className='border border-neutral-200 p-16' />
+              </div>
+              <div className="form-group">
+                <p style={{ fontWeight: "900", fontSize: "large" }}>Choose Back picture</p>
+                <Dropzonee HandleImagesChange={handleImgChangee} className='border border-neutral-200 p-16' />
+              </div>
+            </>
+          ) : (
+            <div className="form-group">
+              <p style={{ fontWeight: "900", fontSize: "large" }}>Choose Logo</p>
+              <Dropzoneee HandleImagesChange={handleImgChangeee} className='border border-neutral-200 p-16' />
+            </div>
+          )}
 
           <div className="form-group  pt-2">
             <div className="">
-              <p className='mb-2'>Card options</p>
+              <p className='mb-2' style={{ fontWeight: "900", fontSize: "large" }}>Card options</p>
               <select
                 className='mb-2'
                 value={selectedOption1}
@@ -464,8 +513,8 @@ const page = () => {
               >
                 <option value="White card - Name">White card - Name</option>
                 <option value="Black card - Name">Black card - Name</option>
-                <option value="White card - Logo">White card - Logo</option>
-                <option value="Black card - Logo">Black card - Logo</option>
+                <option value="White card - Name + Logo">White card - Name + Logo</option>
+                <option value="Black card - Name + Logo">Black card - Name + Logo</option>
                 <option value="Full Colour card">Full Colour card</option>
               </select>
             </div>
@@ -475,10 +524,10 @@ const page = () => {
 
 
           <div className="form-group  pt-2">
-            <b className='mb-2'>Add your personalisation </b>
-            <p className='small'>Please provide:</p>
-            <p className='small'>- Full name and any text details that you want to be printed on the card.</p>
-            <p className='small'>- If you choose the option for a card with a logo, please send us the logo file with a transparent background in a message via Social Tap.</p>
+            <b className='mb-2' style={{ fontWeight: "900", fontSize: "large" }}>Add your personalisation </b>
+            <p style={{ fontSize: "small" }}>Please provide:</p>
+            <p style={{ fontSize: "small" }}>- Full name and any text details that you want to be printed on the card.</p>
+            <p style={{ fontSize: "small" }}>- If you choose the option for a card with a logo, please send us the logo file with a transparent background in a message via Social Tap.</p>
             <div className="">
               <textarea
                 className="form-control"
@@ -633,7 +682,7 @@ const page = () => {
       <div className="">
         <div className=""></div>
         <div className="">
-          <div className="form-group ">
+          {/* <div className="form-group ">
             <div className="">
               <label style={{ display: "block" }}>
                 <input
@@ -659,19 +708,7 @@ const page = () => {
                 />
                 Facebook
               </label>
-
-
-              <label style={{ display: "block" }}>
-                <input
-                  type="radio"
-                  name='plateform'
-                  value="X"
-                  checked={inputs.plateform === "X"}
-                  onChange={handleChange}
-                  style={{ marginRight: "1em" }}
-                />
-                X
-              </label>
+ 
 
               <label style={{ display: "block" }}>
                 <input
@@ -683,22 +720,20 @@ const page = () => {
                   style={{ marginRight: "1em" }}
                 />
                 TikTok
-              </label>
-
-
-
-              <label style={{ display: "block" }}>
-                <input
-                  type="radio"
-                  name='plateform'
-                  value="LinkedIn"
-                  checked={inputs.plateform === "LinkedIn"}
-                  onChange={handleChange}
-                  style={{ marginRight: "1em" }}
-                />
-                LinkedIn
-              </label>
+              </label> 
             </div>
+          </div> */}
+
+          <div className="form-group  pt-2">
+            <div className="">
+              <p className='mb-2'>Platform</p>
+              <select value={selectedOptionfb} onChange={(event) => handleSelectChangefb(event.target.selectedIndex)} style={{ width: '100%', padding: '.5em' }}>
+                <option value="Facebook">Facebook</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Tiktok">Tiktok</option>
+              </select>
+            </div>
+
           </div>
 
           <div className="form-group  pt-2">
@@ -1448,7 +1483,7 @@ const page = () => {
 
           <div className="form-group  pt-2">
             <div className="">
-              <p className='mb-2'>Color</p>
+              <p className='mb-2' style={{ fontWeight: "900", fontSize: "25px" }}>Color</p>
               <select value={selectedOption} onChange={(event) => handleSelectChange(event.target.selectedIndex)} style={{ width: '100%', padding: '.5em' }}>
                 <option value="white">White</option>
                 <option value="black">Black</option>
@@ -1458,13 +1493,7 @@ const page = () => {
           </div>
 
 
-          <div className="form-group  pt-2">
-            <div className="">
-              <p>Choose front picture</p>
-              <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16  ' />
 
-            </div>
-          </div>
         </div>
 
         <div className=""></div>
@@ -1968,8 +1997,6 @@ const page = () => {
       />
 
 
-
-
       <div className="ProductDetailWrapper">
         <div className="BreadcrumbsWrapper">
           <div className="br_flex br_px-6 xl:br_px-0 br_text-xs-sans-bold-stretched br_text-[12px] br_text-grey-400 br_h-12 br_items-center">
@@ -2017,7 +2044,7 @@ const page = () => {
                                       <div className="Slide Slide--image">
                                         <img
                                           src={item}
-                                          style={{ maxWidth: "100%", height: "auto" }}
+                                          style={{ maxWidth: "65%", height: "auto" }}
                                         />
                                       </div>
                                     </div>
@@ -2070,7 +2097,7 @@ const page = () => {
                 </section>
                 <section className="ProductSelector">
                   <span className="ProvidersSingleProduct--selected">
-                    <h1>
+                    <h1 style={{ fontWeight: "900", fontSize: "25px" }}>
                       {title}
                       <span
                         className="ProductSelector_EditionLabel"
@@ -2082,7 +2109,7 @@ const page = () => {
                     <span className="ProvidersSingleProduct--selected">
                       <div className="br_flex">
                         <span className="price">
-                          <span className="price_value">${price}</span>
+                          <span className="price_value" style={{ fontWeight: "900", fontSize: "25px" }}>${price}</span>
                         </span>
                       </div>
                     </span>
@@ -2100,7 +2127,7 @@ const page = () => {
                   </div>
 
                   <div style={{ marginTop: '20px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-                    <label htmlFor="quantity" style={{ marginRight: '10px' }}>Quantity:</label>
+                    <label htmlFor="quantity" style={{ marginRight: '10px', fontWeight: "900", fontSize: "large" }}  >Quantity:</label>
                     <button
                       onClick={decrementQuantity}
                       style={{
@@ -2155,7 +2182,7 @@ const page = () => {
                       ) : (
                         <>
 
-                          <p style={{ color: "#4acb4a", textAlign: "center", fontSize: "2em", fontWeight: "bolder" }}>Done!</p>
+                          <p style={{ color: "#4acb4a", textAlign: "center", fontSize: "2em", fontWeight: "bolder" }}>Item In Cart!</p>
                           <div className="">
                             <div className=""></div>
                             <div className="">
@@ -2191,36 +2218,59 @@ const page = () => {
                   <span className="ProvidersIfSelectedProductMatchesFilter">
 
                   </span>
-                  {/* <div
+                  <div
                     className="DynamicAccordion"
                     data-behaviour="tabs"
                     id="dynamic_tabs_misc"
                   >
+                    <div id='howID' className="DynamicAccordion_Tab DynamicAccordion_Tab--closed">
+                      <label className="DynamicAccordion_Tab_Header">
+                        <input onClick={handleClick0}
+                          className="DynamicAccordion_Tab_Header_ToggleCheckbox"
+                          type="checkbox"
+                        />
+                        How does it work?
+                      </label>
+                      <div className="DynamicAccordion_Tab_Details">
+                        <div className="Specifications_Content">
+                          <div className="Specifications_Content_">
+                            <div>
+                              <span className="ProvidersIfSelectedProductMatchesFilter">
+                                <p>
+                                  Simply tap our card anywhere on your customers smartphone and a link to leave you a google review will appear. It's that easy.
+                                </p>
+
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div id='specID' className="DynamicAccordion_Tab DynamicAccordion_Tab--closed">
                       <label className="DynamicAccordion_Tab_Header">
                         <input onClick={handleClick1}
                           className="DynamicAccordion_Tab_Header_ToggleCheckbox"
                           type="checkbox"
                         />
-                        SPECIFICATIONS
+                        Specifications
                       </label>
                       <div className="DynamicAccordion_Tab_Details">
                         <div className="Specifications_Content">
                           <div className="Specifications_Content_">
                             <div>
-                              <span>Dimensions: 95 x 80mm</span>
-                            </div>
-                          </div>
-                          <div className="Specifications_Content_">
-                            <div>
                               <span className="ProvidersIfSelectedProductMatchesFilter">
                                 <p>
-                                  Materials: The leathers we use are premium hides tanned under
-                                  gold-rated Leather Working Group environmental
-                                  protocols, then dyed through so they age gracefully.
-                                  The woven fabrics we use are sustainably produced
-                                  and chosen for their durability and lightweight
-                                  performance.
+                                  <h2>NFC Card Specifications</h2>
+                                  <ul style={{ listStyleType: 'none', padding: 0 }}>
+                                    <li><strong>Material:</strong> Premium PVC</li>
+                                    <li><strong>Core:</strong> Optimized twin-core</li>
+                                    <li><strong>Chipset:</strong> High-speed NX2 series</li>
+                                    <li><strong>Frequency:</strong> 13.56 MHz (HF)</li>
+                                    <li><strong>Data Transfer:</strong> Up to 848 kbit/s</li>
+                                    <li><strong>Compatibility:</strong> ISO/IEC 14443 Type A. Suitable for smartphones with iOS 13+ or Android 5.0+</li>
+                                    <li><strong>Security:</strong> AES-128 encryption</li>
+                                    <li><strong>Description:</strong> Designed for swift NFC interactions, our NFC cards ensure a fast and secure connection.</li>
+                                  </ul>
                                 </p>
 
                               </span>
@@ -2239,14 +2289,11 @@ const page = () => {
                       </label>
                       <div className="DynamicAccordion_Tab_Details">
                         <p>
-                          We offer regular or express shipping to most addresses
-                          worldwide. Shipping cost and delivery times are calculated
-                          at checkout. Note: P.O. box deliveries will automatically be
-                          sent by regular shipping.
+                          All orders before 2pm are shipped on the same day! All orders after 2pm are shipped the next day. We ship using Australia Post from our Sydney warehouse. Our current shipping times for all orders within Australia are:
                         </p>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </section>
               </div>
               <span className="ProvidersIfSelectedProductMatchesFilter">
